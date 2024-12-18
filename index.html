@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View 3D Model in AR</title>
+  <!-- Model-Viewer Library -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+    model-viewer {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: 80vh;
+    }
+  </style>
+</head>
+<body>
+  <h1>View 3D Model in AR</h1>
+  <model-viewer 
+    src="untitled.usdz" 
+    alt="3D Model in AR" 
+    ar 
+    ar-modes="quick-look" 
+    camera-controls 
+    auto-rotate 
+    shadow-intensity="1">
+    <div slot="poster">Loading AR Model...</div>
+  </model-viewer>
+</body>
+</html>
